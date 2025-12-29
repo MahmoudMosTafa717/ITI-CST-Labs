@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>4</title>
+  </head>
+  <body>
+    <script>
+      var x = Number(prompt("Enter x:"));
+      var y = Number(prompt("Enter y:"));
+      var z = Number(prompt("Enter z:"));
+
+      if (x % y == 0 && x % z == 0) {
+        alert(x + " is divisible by both " + y + " and " + z);
+      } else if (x % y == 0) {
+        alert(x + " is divisible by " + y + " only");
+      } else if (x % z == 0) {
+        alert(x + " is divisible by " + z + " only");
+      } else {
+        alert(x + " is not divisible by either");
+      }
+    </script>
+  </body>
+</html>

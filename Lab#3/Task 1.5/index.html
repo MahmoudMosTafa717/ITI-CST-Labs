@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>5</title>
+  </head>
+  <body>
+    <script>
+      var start = Number(prompt("Enter start:"));
+      var end = Number(prompt("Enter end:"));
+
+      var sum = 0;
+
+      document.write("Numbers multiple of 3: ");
+      for (var i = start; i <= end; i++) {
+        if (i % 3 == 0) {
+          document.write(i + " ");
+          sum = sum + i;
+        }
+      }
+
+      document.write("<br>Numbers multiple of 5: ");
+      for (var j = start; j <= end; j++) {
+        if (j % 5 == 0) {
+          document.write(j + " ");
+          sum = sum + j;
+        }
+      }
+
+      document.write("<br>Total sum = " + sum);
+    </script>
+  </body>
+</html>

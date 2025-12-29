@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>7</title>
+  </head>
+  <body>
+    <script>
+      var x = prompt("Enter x:");
+      var y = prompt("Enter y:");
+      var z = prompt("Enter odd / even / no:");
+
+      if (isNaN(x) || isNaN(y) || (z != "odd" && z != "even" && z != "no")) {
+        alert("Wrong input – Try again");
+      } else {
+        x = Number(x);
+        y = Number(y);
+
+        var sum = 0;
+        var start, end;
+
+        if (x < y) {
+          start = x;
+          end = y;
+        } else {
+          start = y;
+          end = x;
+        }
+
+        document.write("Numbers: ");
+
+        for (var i = start; i <= end; i++) {
+          if (z == "odd" && i % 2 != 0) {
+            document.write(i + " ");
+            sum = sum + i;
+          } else if (z == "even" && i % 2 == 0) {
+            document.write(i + " ");
+            sum = sum + i;
+          } else if (z == "no") {
+            document.write(i + " ");
+            sum = sum + i;
+          }
+        }
+        document.write("<br>Sum = " + sum);
+      }
+    </script>
+  </body>
+</html>
