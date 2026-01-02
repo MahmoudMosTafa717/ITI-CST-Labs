@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #222;
+  color: #fff;
+  padding: 20px;
+}
+
+.gallery-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5em;
+}
+
+.slideshow-wrapper {
+  position: relative;
+  background-color: #000;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  margin-bottom: 30px;
+}
+
+.slideshow {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  display: block;
+}
+
+img {
+  width: 500px;
+  height: 300px;
+  display: block;
+}
+
+.controls {
+  text-align: center;
+  padding: 20px;
+}
+
+button {
+  padding: 12px 30px;
+  margin: 10px 5px;
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #ff5252;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.counter {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 18px;
+  color: #aaa;
+}
+
+.thumbnail-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.thumbnail {
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  transition: border-color 0.3s;
+  overflow: hidden;
+}
+
+.thumbnail img {
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
+}
+
+.thumbnail:hover {
+  border-color: #ff6b6b;
+}
