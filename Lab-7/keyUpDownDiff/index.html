@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Keyboard Events Experiment</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      .box {
+        border: 1px solid #333;
+        padding: 10px;
+        margin-top: 10px;
+        min-height: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box" id="keydownBox">keydown output:</div>
+    <div class="box" id="keypressBox">keypress output:</div>
+
+    <script>
+      const keydownBox = document.getElementById("keydownBox");
+      const keypressBox = document.getElementById("keypressBox");
+
+      // KEYDOWN detects ALL keys + physical key
+      document.addEventListener("keydown", function (e) {
+        // BONUS prevent Ctrl + S
+        if (e.ctrlKey && e.key === "s") {
+          e.preventDefault();
+          alert("Ctrl + S prevented!");
+        }
+
+        keydownBox.textContent =
+          "keydown → code (physical): " +
+          e.code +
+          " | key (character): " +
+          e.key;
+      });
+
+      // KEYPRESS (deprecated) detects ONLY printable characters
+      document.addEventListener("keypress", function (e) {
+        keypressBox.textContent = "keypress → key (character only): " + e.key;
+      });
+    </script>
+  </body>
+</html>
